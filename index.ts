@@ -22,10 +22,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(upload.single('productImage')); // handling image uploads. Name must be the same as the one appended in the form data
+//app.use(upload.single('productImage')); // handling image uploads. Name must be the same as the one appended in the form data
 app.use('/uploads',express.static('uploads')) // makes the folder public so the images is available on the server
-
-app.use('/image', imageRoute);
+app.use('/image', upload.single('productImage'), imageRoute);
 
 
 // initial route

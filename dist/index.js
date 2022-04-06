@@ -22,9 +22,9 @@ app.use((req, res, next) => {
     }
     next();
 });
-app.use(diskStorage_1.default.single('productImage')); // handling image uploads. Name must be the same as the one appended in the form data
+//app.use(upload.single('productImage')); // handling image uploads. Name must be the same as the one appended in the form data
 app.use('/uploads', express_1.default.static('uploads')); // makes the folder public so the images is available on the server
-app.use('/image', ocr_route_1.default);
+app.use('/image', diskStorage_1.default.single('productImage'), ocr_route_1.default);
 // initial route
 app.get('/', (req, res) => {
     res.send('Express + TypeScript Server');
