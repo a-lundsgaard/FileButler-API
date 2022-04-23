@@ -1,5 +1,5 @@
 echo "Building docker image for linux/amd64\n"
-docker buildx build --platform linux/amd64 -t ocr-api-1 . &&
+docker buildx build --no-cache --platform linux/amd64 -t ocr-api-1 . &&
 
 echo "\nTagging image for registry\n"
 docker tag ocr-api-1 registry.heroku.com/ocr-api-1/web &&
