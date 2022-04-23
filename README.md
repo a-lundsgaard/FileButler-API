@@ -2,6 +2,8 @@
 
 API for [FileButler](https://github.com/a-lundsgaard/FileButler)
 
+Features include extracting text from images using the open-source tesseract ocr-engine.
+
 ## Architecture
 
 Build as a REST-API using a MVC-pattern.
