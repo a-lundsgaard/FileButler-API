@@ -6,7 +6,7 @@ Features include extracting text from images using the open-source tesseract ocr
 
 ## Architecture
 
-Build as a REST-API using a MVC-pattern.
+Build as a REST-API using the MVC-pattern.
 
 ## Stack
 
